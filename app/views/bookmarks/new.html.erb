@@ -1,5 +1,5 @@
 
-<h1>Create a new Bookmark</h1>
+<h1>Create a new Bookmark to the list "<%= @list.name %>"</h1>
 <%= link_to "return to list", lists_path %>
 
 <h1>New Bookmark</h1>
@@ -9,3 +9,5 @@
   <%= f.association :movie %>
   <%= f.submit "Submit Bookmark", class: "btn btn-primary" %>
 <% end %>
+
+
