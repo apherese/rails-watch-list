@@ -1,10 +1,22 @@
-<h1>Create a new Bookmark to the list "<%= @list.name %>"</h1>
-<%= link_to "return to list", lists_path %>
+<div class="cover mb-4 d-flex align-items-center justify-content-center">
+  <div class="text-center text-grey">
+    <h1>Create a new Bookmark to the list</h1>
+    <h3 class="typed-js" data-controller="typed-js"></h3>
+  </div>
+</div>
 
-<h1>New Bookmark</h1>
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :list %>
-  <%= f.association :movie %>
-  <%= f.submit "Submit Bookmark", class: "btn btn-primary" %>
-<% end %>
+<div class="container py-5">
+  <div class="d-flex align-items-center mb-3">
+    <%= link_to "create a new list", new_list_path, class: "btn btn-flat" %>
+    <%= link_to "return to all lists", lists_path, class: "btn btn-flat" %>
+  </div>
+  <div>
+    <h1>New Bookmark</h1>
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+      <%= f.input :comment %>
+      <%= f.association :list %>
+      <%= f.association :movie %>
+      <%= f.submit "Submit Bookmark", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

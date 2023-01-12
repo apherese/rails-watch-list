@@ -10,9 +10,12 @@
   <% end %>
 </ul>
 
-<ul>
-  <li><%= link_to "Add a bookmark to this list", new_list_bookmark_path(@list) %></li>
-</ul>
+<div class="d-flex align-items-center mb-3">
+  <ul>
+    <li><%= link_to "Add a bookmark to this list", new_list_bookmark_path(@list) %></li>
+    <%= link_to "return to all lists", lists_path, class: "btn btn-flat" %>
+  </ul>
+</div>
 
 <ul>
   <li>
